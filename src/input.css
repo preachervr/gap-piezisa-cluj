@@ -26,15 +26,20 @@
   --color-charcoaldepths-800: oklch(24.7% 0.006 258.4);
   --color-charcoaldepths-900: oklch(20.9% 0.006 271.1);
   --color-charcoaldepths-950: oklch(17.2% 0.003 248.0);
-  --color-cyberglow-50: oklch(95.9% 0.026 339.4);
-  --color-cyberglow-100: oklch(91.9% 0.049 343.0);
-  --color-cyberglow-200: oklch(83.0% 0.116 342.5);
-  --color-cyberglow-300: oklch(74.3% 0.188 344.8);
-  --color-cyberglow-400: oklch(67.9% 0.243 348.0);
-  --color-cyberglow-500: oklch(64.1% 0.265 352.3);
-  --color-cyberglow-600: oklch(57.8% 0.240 351.6);
-  --color-cyberglow-700: oklch(51.1% 0.213 350.5);
-  --color-cyberglow-800: oklch(44.0% 0.184 349.1);
-  --color-cyberglow-900: oklch(36.6% 0.155 347.0);
-  --color-cyberglow-950: oklch(28.7% 0.122 345.9);
+  --color-crimsonglow-50: oklch(96.9% 0.011 10.3);
+  --color-crimsonglow-100: oklch(93.3% 0.023 11.0);
+  --color-crimsonglow-200: oklch(86.9% 0.040 17.9);
+  --color-crimsonglow-300: oklch(76.3% 0.079 18.1);
+  --color-crimsonglow-400: oklch(64.4% 0.131 19.7);
+  --color-crimsonglow-500: oklch(57.1% 0.222 20.1);
+  --color-crimsonglow-600: oklch(52.2% 0.203 20.1);
+  --color-crimsonglow-700: oklch(46.9% 0.182 20.1);
+  --color-crimsonglow-800: oklch(40.9% 0.158 20.1);
+  --color-crimsonglow-900: oklch(34.3% 0.131 19.9);
+  --color-crimsonglow-950: oklch(24.8% 0.092 17.3);
+}
+
+::selection {
+  background-color: oklch(57.1% 0.222 20.1);
+  color: oklch(99.1% 0.002 247.8);
 }

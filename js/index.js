@@ -6,11 +6,11 @@ links.forEach((link) => {
   const linkAttribute = link.getAttribute("href");
 
   if (linkAttribute === currentPage) {
-    link.classList.add("text-cyberglow-500");
+    link.classList.add("text-crimsonglow-500");
     link.classList.add("before:w-full");
     
   } else {
-    link.classList.remove("text-cyberglow-500");
+    link.classList.remove("text-crimsonglow-500");
     link.classList.remove("before:w-full");
   }
 });
