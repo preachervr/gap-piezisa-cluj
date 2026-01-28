@@ -31,9 +31,7 @@
     </symbol>
   </svg>
   <div class="min-h-screen flex flex-col">
-    <header class="w-full font-oswald">
-      <div class="relative w-full h-screen object-cover shadow-md bg-cover bg-center flex flex-col text-gray-200 bg-charcoaldepths-950">
-        <div class="absolute inset-0 bg-charcoaldepths-950 opacity-80"></div>
+    <header class="w-full bg-charcoaldepths-950 font-oswald">
       <section class="h-full flex flex-col justify-between items-center px-4 md:px-8 lg:px-16 py-2 md:py-4 lg:py-6 w-full text-arcticmist-100 z-10">
         <article class="w-full flex justify-between items-center text-lg md:text-xl lg:text-2xl">
           <div class="w-10 md:w-13 lg:w-16">
@@ -55,15 +53,8 @@
             </div>
           </div>
         </article>
-        <article class="flex flex-col justify-center gap-4 md:gap-5 lg:gap-6 items-center flex py-2 md:py-4 lg:py-6 px-4 md:px-8 lg:px-16 z-2 w-full h-full font-oswald">
-          <p class="font-kalam text-2xl md:text-3xl lg:text-4xl font-bold rotate-2">Welcome to</p>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-center leading-10 md:leading-12 lg:leading-14">Gap <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 
-            to-crimsonglow-500"> Piezișă</span></h1>
-          <p class="text-base md:text-xl lg:text-2xl text-charcoaldepths-200 font-light tracking-wide">Quiz Nights • Socialize • Events</p>
-          <a href="meniu.html" class="cursor-pointer px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-crimsonglow-500 uppercase font-oswald text-lg md:text-xl hover:bg-crimsonglow-600 active:bg-crimsonglow-700 transition-all 
-          duration-300 ease-out text-charcoaldepths-900 font-semibold rounded-lg">Meniu</a>
-        </article>
       </section>
+      <div class="h-[2px] w-full bg-gradient-to-r from-red-400 to-crimsonglow-500"></div>
     </header>
     <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 invisible pointer-events-none transition-all duration-300">
       <div id="menuBackDrop" class="absolute inset-0 bg-charcoaldepths-950/0 transition-all duration-300 backdrop-blur-none"></div>
@@ -99,40 +90,129 @@
         </nav>
       </aside>
     </div>
-    <main class="flex flex-col items-center justify-center w-full py-6 md:py-10 lg:py-14 gap-8 md:gap-12 lg:gap-16">
-      <section class="grid grid-cols-1 md:grid-cols-2 px-4 md:px-24 lg:px-36 gap-4 md:gap-8 lg:gap-16">
-        <article class="rounded-lg bg-charcoaldepths-950 overflow-hidden h-[300px] md:h-[500px] lg:h-[700px] w-full shadow-lg order-2 md:order-1">
-        </article>
-        <article class="order-1 md:order-2 flex flex-col items-center justify-center gap-3 md:gap-6 lg:gap-8">
-          <h2 class="font-oswald text-2xl md:text-3xl lg:text-4xl uppercase">Gap Piezișă • <span class="text-crimsonglow-500">Zile și Nopți</span></h2>
-          <p class="text-base md:text-lg text-left md:text-justify">Gap este definiția versatilității în inima Clujului. Suntem locul unde mințile ascuțite se întâlnesc la serile legendare de Quiz, unde comunitățile 
-            se adună pentru evenimente speciale și unde, când se lasă noaptea, începe adevărata nebunie. Fie că vii să-ți testezi cunoștințele cu echipa, să socializezi la un eveniment sau să dansezi până la epuizare
-             pe ritmurile DJ-ilor noștri, Gap îți oferă experiența completă. Un spațiu cameleonic, unde fiecare seară aduce o nouă poveste și o nouă energie.</p>
-          <a href="rezerva.html" class="cursor-pointer px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-crimsonglow-500 uppercase font-oswald text-lg md:text-xl hover:bg-crimsonglow-600 active:bg-crimsonglow-700 
-          transition-all duration-300 ease-out text-charcoaldepths-900 font-semibold rounded-lg" aria-label="Go to Book Page">Rezervă Masă</a>
-        </article>
+    <main class="flex flex-col items-center justify-center w-full gap-8 md:gap-12 lg:gap-16">
+      <section class="sticky flex justify-center md:justify-start w-full bg-charcoaldepths-950 text-arcticmist-100 px-10 py-8 font-oswald">
+        <div class="relative z-50">
+          <button id="menuDropdownBtn" class="w-full bg-charcoaldepths-900 border-2 border-crimsonglow-400 text-arcticmist-100 p-4 rounded-xl flex justify-between items-center group transition-colors hover:border-crimsonglow-500">
+            <span id="selectedCategory" class="font-oswald uppercase tracking-wider">JUMP TO CATEGORY...</span>
+            <span class="material-symbols-outlined text-crimsonglow-500 transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div id="menuDropdownList" class="absolute top-full left-0 w-full mt-2 text-arcticmist-100 bg-charcoaldepths-900 border-2 border-crimsonglow-500 rounded-xl shadow-2xl overflow-hidden hidden transform origin-top transition-all">
+            <a href="#tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Cigarettes</a>
+            <a href="#bottle" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Bottle Offers</a>
+            <a href="#longdrinks" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Long Drinks</a>
+            <a href="#cocktails" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Cocktails</a>
+            <a href="#spritz" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Spritz</a>
+            <a href="#hardliquor" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Hard Liquor</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Shots</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Wines</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Beers</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Coffee & Hot Drinks</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Lemonades</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Fresh Juices</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Energy Drinks</a>
+            <a href="tutun" class="block px-6 py-4 hover:bg-charcoaldepths-950 hover:text-crimsonglow-500 border-b border-charcoaldepths-800 transition-colors">Soft Drinks</a>
+          </div>
+        </div>
       </section>
-      <section class="grid grid-cols-1 md:grid-cols-3 items-center justify-center px-4 md:px-24 lg:px-36 gap-4 md:gap-8 lg:gap-16">
-        <article class="flex flex-col items-center justify-center text-center border-2 border-charcoaldepths-300 hover:border-crimsonglow-500 hover:bg-arcticmist-100 transition-all duration-200 ease-in-out px-9 py-6 rounded-xl">
-          <h2 class="font-oswald text-2xl md:text-3xl lg:text-4xl uppercase mb-4">Quiz & Events <span class="material-symbols-outlined text-crimsonglow-500">local_cafe</span></h2>
-          <p class="text-base md:text-lg">Testează-ți cunoștințele și bucură-te de vibe. Serile noastre de Quiz și evenimente adună cea mai faină comunitate din oraș.</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center border-2 border-charcoaldepths-300 hover:border-crimsonglow-500 hover:bg-arcticmist-100 transition-all duration-200 ease-in-out px-9 py-6 rounded-xl">
-          <h2 class="font-oswald text-2xl md:text-3xl lg:text-4xl uppercase mb-4">Vibe & Conexiune <span class="material-symbols-outlined text-crimsonglow-500">wifi</span></h2>
-          <p class="text-base md:text-lg">Am creat locul în care ne-ar plăcea nouă să lucrăm. Fără gălăgie inutilă, doar oameni fain și scaune comode.</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center border-2 border-charcoaldepths-300 hover:border-crimsonglow-500 hover:bg-arcticmist-100 transition-all duration-200 ease-in-out px-9 py-6 rounded-xl">
-          <h2 class="font-oswald text-2xl md:text-3xl lg:text-4xl uppercase mb-4">Parties <span class="material-symbols-outlined text-crimsonglow-500">nightlife</span></h2>
-          <p class="text-base md:text-lg">Nu ne complicăm. Muzică bună, cocktailuri făcute cum trebuie și locul perfect unde să ieși cu gașca. Seara începe cu tine.</p>
-        </article>
-      </section>
-      <section class="w-full flex flex-col gap-4 md:gap-8 lg:gap-12">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.0490082899237!2d23.574366776952893!3d46.76393044578633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490f384c95c6c5%3A0x80cc24bc8e2cbcec!2sGAP%20CLUB%20PIEZISA!5e0!3m2!1sen!2sro!4v1769266623212!5m2!1sen!2sro" 
-        title="Google Maps Location of Gap Piezișă" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
-      </section>
-      <button id="backToTop" aria-label="Back to top" class="block cursor-pointer opacity-0 fixed right-6 bottom-6 px-4 py-4 bg-crimsonglow-500 rounded-full shadow-lg hover:bg-crimsonglow-600 
-      active:bg-crimsonglow-700 transition-all duration-300 text-arcticmist-100 flex items-center justify-center pointer-events-none z-50"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
     </main>
+    <section class="uppercase grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 px-6 md:px-12 lg:px-16">
+      <article id="tutun" class="flex flex-col gap-2 md:gap-4 lg:gap-12">
+        <div class="text-center md:text-left font-oswald tracking-wide">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl text-crimsonglow-500 font-semibold">Cigarettes</h2>
+          <p class="text-charcoaldepths-800/80 font-medium">Preț Maximal Admis</p>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl border-b-2 border-crimsonglow-500 w-fit text-crimsonglow-500 font-semibold">www.yourfreedom.ro</li>
+            <li>Winston Nova (Blue Longs 8MG)</li>
+            <li>Winston PLus (Red 10 MG)</li>
+            <li>Winston (Blue Longs 6 MG)</li>
+            <li>Winston Super Line (Black 7 MG, Caster Super Line 7 MG, XPRESSION 5 MG, BLUE 5 MG, SILVER 3 MG)</li>
+            <li>Winston Selection Night (8 MG)</li>
+            <li>Winston Selection Sunrise (7 MG)</li>
+            <li>Winston Selection Skylite (8 MG)</li>
+            <li>Winston Concept Black (10 MG)</li>
+            <li>Winston Concept Blue (8 MG)</li>
+            <li>Winston Concept Caster (7 MG)</li>
+            <li>Winston Concept XSPRESSION (6 MG)</li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl border-b-2 border-crimsonglow-500 w-fit text-crimsonglow-500 font-semibold">www.yoursociety.ro</li>
+            <li>Sobranie Redefined (Red - 8 MG, Black - 7 MG, Blue - 6 MG, Chrome - 4 MG)</li>
+            <li>Sobranie Collection (Red - 8 MG, Black - 7 MG, Blue - 6 MG, Green - 4 MG, Golds - 3 MG)</li>
+            <li>Sobranie Super Slim (Black - 6 MG, Pink - 3 MG, White - 1 MG)</li>
+            <li>Sobranie Laube (Black - 7 MG, White - 5 MG, Cocktail - 5 MG)</li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl border-b-2 border-crimsonglow-500 w-fit text-crimsonglow-500 font-semibold">www.letscreate.ro</li>
+            <li>Camel Compact Black (8 MG)</li>
+            <li>Camel Caster (7 MG)</li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl border-b-2 border-crimsonglow-500 w-fit text-crimsonglow-500 font-semibold">www.ploom.ro</li>
+            <li>Dispozitiv Ploom X (Black, Silver, Champagne Gold, Slate Grey, Navy Blue)</li>
+            <li>Pachet Sobranie (Bronze, Tan, Gold, Silver, Green, Yellow, Garnet, Teal, Aquamarine, Marine, Velvet)</li>
+          </ul>
+        </div>
+      </article>
+      <article id="bottle" class="flex flex-col gap-2 md:gap-4 lg:gap-6">
+        <div class="text-center md:text-left font-oswald tracking-wide">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl text-crimsonglow-500 font-semibold">Bottle Offers</h2>
+          <p class="text-charcoaldepths-800/80">700 ML 40% ALC/VOL</p>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">VODKA</li>
+            <li>Absolut + 4 Tonic / 4 Red Bull / 1L Juice <span class="text-crimsonglow-500 font-semibold">260 LEI</span></li>
+            <li>Belvedere + 4 Tonic / 4 Red Bull / 1L Juice <span class="text-crimsonglow-500 font-semibold">500 LEI</span></li>
+            <li>Belvedere Magnum 1.75l + 6 Tonic / 6 Red Bull / 2L Juice <span class="text-crimsonglow-500 font-semibold">950 LEI</span></li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">Whisky</li>
+            <li>Jameson + 4 Pepsi / 4 Red Bull <span class="text-crimsonglow-500 font-semibold">280 LEI</span></li>
+            <li>Jack Daniel's + 4 Pepsi / 4 Red Bull <span class="text-crimsonglow-500 font-semibold">300 LEI</span></li>
+            <li>Chivas Regal 12 ani + 4 Pepsi / 4 Red Bull <span class="text-crimsonglow-500 font-semibold">300 LEI</span></li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">Rum</li>
+            <li>Havana Anejo 3 Anos + 4 Pepsi <span class="text-crimsonglow-500 font-semibold">240 LEI</span></li>
+            <li>Havana Cuban Spice + 4 Pepsi <span class="text-crimsonglow-500 font-semibold">240 LEI</span></li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">Amaro</li>
+            <li>Jagermeister + 4 Red Bull / 1L Juice <span class="text-crimsonglow-500 font-semibold">250 LEI</span></li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">Gin</li>
+            <li>Beefeater + 4 Evervess Tonic / 1L Juice <span class="text-crimsonglow-500 font-semibold">250 LEI</span></li>
+            <li>Malfy originale gin + 4 Evervess Tonic / 1L Juice <span class="text-crimsonglow-500 font-semibold">300 LEI</span></li>
+          </ul>
+        </div>
+        <div class="text-justify text-base md:text-lg">
+          <ul>
+            <li class="text-lg md:text-xl font-semibold">Cognac</li>
+            <li>Jidvei Vin Ars / 700 ML <span class="text-crimsonglow-500 font-semibold">250 LEI</span></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <button id="backToTop" aria-label="Back to top" class="block cursor-pointer opacity-0 fixed right-6 bottom-6 px-4 py-4 bg-crimsonglow-500 rounded-full shadow-lg hover:bg-crimsonglow-600 
+      active:bg-crimsonglow-700 transition-all duration-300 text-arcticmist-100 flex items-center justify-center pointer-events-none z-50"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
     <footer class="bg-charcoaldepths-950 text-arcticmist-300 border-t border-charcoaldepths-800 font-lato">
       <div class="container mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -202,6 +282,6 @@
       </div>
     </footer>
   </div>
-  <script src="js/index.js" defer></script>
+  <script src="js/meniu.js" defer></script>
 </body>
 </html>
