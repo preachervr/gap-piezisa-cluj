@@ -52,37 +52,6 @@ function toggleMenu() {
   }
 }
 
-// Categories Dropdown
-
-btnMenu.addEventListener("click", toggleMenu);
-backdrop.addEventListener("click", toggleMenu);
-
-const btn = document.getElementById('menuDropdownBtn');
-const list = document.getElementById('menuDropdownList');
-const text = document.getElementById('selectedCategory');
-const options = list.querySelectorAll('a');
-
-
-btn.addEventListener('click', () => {
-    list.classList.toggle('hidden');
-});
-
-
-options.forEach(option => {
-    option.addEventListener('click', () => {
-        // 1. Update text to show what they clicked
-        text.textContent = option.textContent.trim();
-        // 2. Hide list
-        list.classList.add('hidden');
-    });
-});
-
-
-document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !list.contains(e.target)) {
-        list.classList.add('hidden');
-    }
-});
 
 // Back to Top
 
